@@ -207,7 +207,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     a.setApplicationName("HomeAutomation");
 
-    QFile qss("://atmel-stylesheet.qss");
+    QFile qss("://microchip-stylesheet.qss");
     qss.open(QFile::ReadOnly);
     a.setStyleSheet(qss.readAll());
     qss.close();

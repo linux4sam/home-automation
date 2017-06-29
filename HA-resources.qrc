@@ -45,6 +45,6 @@
         <file>resources/smallcamera/up.png</file>
         <file>resources/smallcamera/left.png</file>
         <file>resources/smallcamera/right.png</file>
-        <file>atmel-stylesheet.qss</file>
+        <file>microchip-stylesheet.qss</file>
     </qresource>
 </RCC>

@@ -116,10 +116,10 @@ RESOURCES += \
     mediaSelection.qrc
 
 OTHER_FILES += \
-    atmel-stylesheet.qss
+    microchip-stylesheet.qss
 
 target.path = /opt/HomeAutomation
-target.files = HomeAutomation HomeAutomation.sh atmel-stylesheet.qss stations/ resources/ CustomWidgets/ media/ images/
+target.files = HomeAutomation HomeAutomation.sh microchip-stylesheet.qss stations/ resources/ CustomWidgets/ media/ images/
 configfile.path = /opt/ApplicationLauncher/applications/xml
 configfile.files = configs/1-home-automation.xml
 imagefile.path = /opt/ApplicationLauncher/applications/resources
