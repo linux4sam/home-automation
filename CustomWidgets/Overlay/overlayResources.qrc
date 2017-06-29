@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Overlay/ApplicationDelegate.qml</file>
+        <file>qml/Overlay/Overlay.qml</file>
+        <file>resources/button-slider-off.png</file>
+        <file>resources/button-slider-on.png</file>
+        <file>resources/button-climate-off.png</file>
+        <file>resources/button-climate-on.png</file>
+        <file>resources/button-lighting-off.png</file>
+        <file>resources/button-lighting-on.png</file>
+        <file>resources/button-media-off.png</file>
+        <file>resources/button-media-on.png</file>
+        <file>resources/button-security-off.png</file>
+        <file>resources/button-security-on.png</file>
+        <file>qml/smallOverlay/ApplicationDelegate.qml</file>
+        <file>qml/smallOverlay/Overlay.qml</file>
+        <file>smallresources/button-climate-off.png</file>
+        <file>smallresources/button-climate-on.png</file>
+        <file>smallresources/button-lighting-off.png</file>
+        <file>smallresources/button-lighting-on.png</file>
+        <file>smallresources/button-media-off.png</file>
+        <file>smallresources/button-media-on.png</file>
+        <file>smallresources/button-security-off.png</file>
+        <file>smallresources/button-security-on.png</file>
+        <file>smallresources/button-slider-off.png</file>
+        <file>smallresources/button-slider-on.png</file>
+        <file>smallresources/button-home-off.png</file>
+        <file>smallresources/button-home-on.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,6 @@
+QPushButton:pressed {
+     background-color: transparent;
+}
+
+
+

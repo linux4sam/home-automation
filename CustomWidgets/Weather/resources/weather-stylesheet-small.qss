@@ -1,0 +1,31 @@
+QLabel {
+    font: 9pt "Sans Serif";
+    color: rgb(199, 199, 199);
+}
+
+QLabel#temperature{
+        font: 14px;
+	color: white;	
+}
+
+QLabel#day{
+        font: 10px;
+        color: #0f93dd;
+}
+
+QLabel#weather_description_label{
+  font: bold;
+  color: rgb(255, 255, 255);
+}
+
+QLabel#date_label{
+  font: bold;
+  color: #0F93dd
+}
+
+QLabel#temp_label{
+  font: 26pt;
+  color: rgb(255, 255, 255);
+}
+
+

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/lighting-control-dial.qss</file>
+        <file>resources/lighting-dial-FINAL.svg</file>
+        <file>resources/button-lighting.png</file>
+        <file>resources/lighting-dial-nocolor.svg</file>
+        <file>resources/lighting-dial-nocolor.png</file>
+    </qresource>
+</RCC>

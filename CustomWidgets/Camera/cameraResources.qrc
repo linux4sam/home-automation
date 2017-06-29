@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/background.png</file>
+        <file>resources/window-security.png</file>
+        <file>smallresources/background.png</file>
+        <file>smallresources/window-security.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/slider-dot.png</file>
+        <file>images/media-control-panel.png</file>
+        <file>images/media-pause-off.png</file>
+        <file>images/media-play-off.png</file>
+        <file>images/media-stop-off.png</file>
+        <file>resources/mediaPlayer/pause.png</file>
+        <file>resources/mediaPlayer/play.png</file>
+        <file>resources/mediaPlayer/slider-dot.png</file>
+        <file>resources/mediaPlayer/speaker.png</file>
+        <file>resources/mediaPlayer/stop.png</file>
+        <file>resources/mediaPlayer/nav-filler.png</file>
+        <file>resources/smallmediaPlayer/nav-filler.png</file>
+        <file>resources/smallmediaPlayer/pause.png</file>
+        <file>resources/smallmediaPlayer/play.png</file>
+        <file>resources/smallmediaPlayer/slider-dot.png</file>
+        <file>resources/smallmediaPlayer/speaker.png</file>
+        <file>resources/smallmediaPlayer/stop.png</file>
+        <file>resources/sliders/mute.png</file>
+        <file>resources/sliders/volume.png</file>
+    </qresource>
+</RCC>

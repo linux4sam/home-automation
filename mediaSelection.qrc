@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/mediaSelection/button-i-radio-off.png</file>
+        <file>resources/mediaSelection/button-i-radio-on.png</file>
+        <file>resources/mediaSelection/button-local-server-off.png</file>
+        <file>resources/mediaSelection/button-local-server-on.png</file>
+        <file>resources/mediaSelection/button-sirius-xm-off.png</file>
+        <file>resources/mediaSelection/button-sirius-xm-on.png</file>
+        <file>resources/smallmediaSelection/button-i-radio-off.png</file>
+        <file>resources/smallmediaSelection/button-i-radio-on.png</file>
+        <file>resources/smallmediaSelection/button-local-server-off.png</file>
+        <file>resources/smallmediaSelection/button-local-server-on.png</file>
+        <file>resources/smallmediaSelection/button-sirius-xm-off.png</file>
+        <file>resources/smallmediaSelection/button-sirius-xm-on.png</file>
+    </qresource>
+</RCC>

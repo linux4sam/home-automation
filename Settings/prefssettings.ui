@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PrefsSettings</class>
+ <widget class="QWidget" name="PrefsSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>637</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="prefsLabel">
+     <property name="font">
+      <font>
+       <family>Sans Serif</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>DEFINE PREFERENCES</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="prefsLine">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(91, 91, 91);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>30</number>
+     </property>
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="timeZoneLabel">
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Time Zone</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="timeZone">
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>UTC-5 (New York)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UTC-6 (Chicago)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UTC-7 (Denver)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UTC-8 (San Francisco)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UTC (London)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UTC+1 (Paris)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UTC+4 (Moscow)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UTC+8 (Hong Kong)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>UTC+9 (Tokyo)</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1">
+       <item>
+        <widget class="QLabel" name="zipCodeLabel">
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>ZIP Code</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="zipCode">
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>15222</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,1">
+       <item>
+        <widget class="QLabel" name="temperatureLabel">
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Temperature</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="temperature">
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <item>
+          <property name="text">
+           <string>F  (Fahrenheit)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>C  (Celsius)</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="prefsSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::MinimumExpanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>73</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonSave">
+       <property name="maximumSize">
+        <size>
+         <width>109</width>
+         <height>42</height>
+        </size>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>109</width>
+         <height>42</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

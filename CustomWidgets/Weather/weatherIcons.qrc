@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/resources/weather">
+        <file alias="weather-clouds">weather-overcast.svg</file>
+        <file alias="weather-showers">weather-partial-rain.svg</file>
+        <file alias="weather-rain">weather-rainy.svg</file>
+        <file alias="weather-snow">weather-snow.svg</file>
+        <file alias="weather-storm">weather-stormy.svg</file>
+        <file alias="weather-sun">weather-sunny.svg</file>
+        <file>resources/weather-stylesheet.qss</file>
+        <file>resources/weather-stylesheet-small.qss</file>
+    </qresource>
+</RCC>

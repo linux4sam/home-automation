@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/keyboard/keyboard.qml</file>
+        <file>qml/keyboard/assets/CharacterKey.qml</file>
+        <file>qml/keyboard/assets/FunctionKey.qml</file>
+        <file>qml/keyboard/assets/FunctionKeyText.qml</file>
+        <file>qml/keyboard/assets/SwitchKey.qml</file>
+        <file>qml/keyboard/assets/KeyboardLogic.qml</file>
+        <file>qml/keyboard/assets/button-backspace-up.png</file>
+        <file>qml/keyboard/assets/button-backspace-down.png</file>
+        <file>qml/keyboard/assets/button-enter-up.png</file>
+        <file>qml/keyboard/assets/button-enter-down.png</file>
+        <file>qml/keyboard/assets/button-shift-lowercase-up.png</file>
+        <file>qml/keyboard/assets/button-shift-lowercase-down.png</file>
+        <file>qml/keyboard/assets/button-shift-uppercase-up.png</file>
+        <file>qml/keyboard/assets/button-shift-uppercase-down.png</file>
+        <file>qml/smallkeyboard/keyboard.qml</file>
+        <file>qml/smallkeyboard/assets/button-backspace-down.png</file>
+        <file>qml/smallkeyboard/assets/button-backspace-up.png</file>
+        <file>qml/smallkeyboard/assets/button-enter-down.png</file>
+        <file>qml/smallkeyboard/assets/button-enter-up.png</file>
+        <file>qml/smallkeyboard/assets/button-shift-lowercase-down.png</file>
+        <file>qml/smallkeyboard/assets/button-shift-lowercase-up.png</file>
+        <file>qml/smallkeyboard/assets/button-shift-uppercase-down.png</file>
+        <file>qml/smallkeyboard/assets/button-shift-uppercase-up.png</file>
+        <file>qml/smallkeyboard/assets/CharacterKey.qml</file>
+        <file>qml/smallkeyboard/assets/FunctionKey.qml</file>
+        <file>qml/smallkeyboard/assets/FunctionKeyText.qml</file>
+        <file>qml/smallkeyboard/assets/SwitchKey.qml</file>
+        <file>qml/smallkeyboard/assets/KeyboardLogic.qml</file>
+    </qresource>
+</RCC>

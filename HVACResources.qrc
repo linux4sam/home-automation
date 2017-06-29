@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/HeatCoolHumidify/button-cool-off.png</file>
+        <file>resources/HeatCoolHumidify/button-cool-on.png</file>
+        <file>resources/HeatCoolHumidify/button-fan-auto-off.png</file>
+        <file>resources/HeatCoolHumidify/button-fan-auto-on.png</file>
+        <file>resources/HeatCoolHumidify/button-fan-off.png</file>
+        <file>resources/HeatCoolHumidify/button-fan-off-off.png</file>
+        <file>resources/HeatCoolHumidify/button-fan-off-on.png</file>
+        <file>resources/HeatCoolHumidify/button-heat-off.png</file>
+        <file>resources/HeatCoolHumidify/button-heat-on.png</file>
+        <file>resources/HeatCoolHumidify/button-humidiify-off.png</file>
+        <file>resources/HeatCoolHumidify/button-humidiify-on.png</file>
+        <file>resources/small-HeatCoolHumidify/button-cool-off.png</file>
+        <file>resources/small-HeatCoolHumidify/button-cool-on.png</file>
+        <file>resources/small-HeatCoolHumidify/button-fan-auto-off.png</file>
+        <file>resources/small-HeatCoolHumidify/button-fan-auto-on.png</file>
+        <file>resources/small-HeatCoolHumidify/button-fan-off-off.png</file>
+        <file>resources/small-HeatCoolHumidify/button-fan-off-on.png</file>
+        <file>resources/small-HeatCoolHumidify/button-fan-off.png</file>
+        <file>resources/small-HeatCoolHumidify/button-heat-off.png</file>
+        <file>resources/small-HeatCoolHumidify/button-heat-on.png</file>
+        <file>resources/small-HeatCoolHumidify/button-humidiify-off.png</file>
+        <file>resources/small-HeatCoolHumidify/button-humidiify-on.png</file>
+    </qresource>
+</RCC>

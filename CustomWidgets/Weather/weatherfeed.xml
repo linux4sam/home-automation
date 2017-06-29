@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<dwml version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://graphical.weather.gov/xml/DWMLgen/schema/DWML.xsd">
+  <head>
+    <product concise-name="dwmlByDay" operational-mode="developmental" srsName="WGS 1984">
+      <creation-date refresh-frequency='PT1H'>2012-12-06T17:41:20-05:00</creation-date>
+     <category>current observations and forecast</category>
+    </product>
+    <source>
+      <production-center>Gaylord, MI</production-center>
+      <credit>http://www.crh.noaa.gov/apx</credit>
+      <more-information>http://www.nws.noaa.gov/forecasts/xml/</more-information>
+    </source>
+  </head>
+  <data type="forecast">
+
+  <location>
+    <location-key>point1</location-key>
+    <point latitude="44.32" longitude="-85.6"/>
+    <area-description>2 Miles N Boon MI</area-description>
+    <height datum="mean sea level" height-units="feet">1437</height>
+  </location>
+<moreWeatherInformation applicable-location="point1">http://forecast.weather.gov/MapClick.php?lat=44.32&amp;lon=-85.6</moreWeatherInformation>
+  <time-layout time-coordinate="local" summarization="12hourly">
+    <layout-key>k-p6h-n1-1</layout-key>      <start-valid-time>2012-12-06T18:00:00-05:00</start-valid-time>
+      <end-valid-time>2012-12-13T18:00:00-05:00</end-valid-time>
+  </time-layout>
+
+  <time-layout time-coordinate="local" summarization="12hourly">
+    <layout-key>k-p12h-n14-1</layout-key>
+      <start-valid-time period-name="Tonight">2012-12-06T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Friday">2012-12-07T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Friday Night">2012-12-07T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Saturday">2012-12-08T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Saturday Night">2012-12-08T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Sunday">2012-12-09T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Sunday Night">2012-12-09T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Monday">2012-12-10T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Monday Night">2012-12-10T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Tuesday">2012-12-11T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Tuesday Night">2012-12-11T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Wednesday">2012-12-12T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Wednesday Night">2012-12-12T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Thursday">2012-12-13T06:00:00-05:00</start-valid-time>
+  </time-layout>
+
+  <time-layout time-coordinate="local" summarization="12hourly">
+    <layout-key>k-p24h-n7-1</layout-key>
+      <start-valid-time period-name="Tonight">2012-12-06T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Friday Night">2012-12-07T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Saturday Night">2012-12-08T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Sunday Night">2012-12-09T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Monday Night">2012-12-10T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Tuesday Night">2012-12-11T18:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Wednesday Night">2012-12-12T18:00:00-05:00</start-valid-time>
+  </time-layout>
+
+  <time-layout time-coordinate="local" summarization="12hourly">
+    <layout-key>k-p24h-n7-2</layout-key>
+      <start-valid-time period-name="Friday">2012-12-07T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Saturday">2012-12-08T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Sunday">2012-12-09T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Monday">2012-12-10T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Tuesday">2012-12-11T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Wednesday">2012-12-12T06:00:00-05:00</start-valid-time>
+      <start-valid-time period-name="Thursday">2012-12-13T06:00:00-05:00</start-valid-time>
+  </time-layout>
+
+
+  <parameters applicable-location="point1">
+
+    <temperature type="minimum" units="Fahrenheit" time-layout="k-p24h-n7-1">
+      <name>Daily Minimum Temperature</name>
+        <value>32</value>
+        <value>27</value>
+        <value>26</value>
+        <value>28</value>
+        <value>21</value>
+        <value>23</value>
+        <value>26</value>
+    </temperature>
+
+    <temperature type="maximum" units="Fahrenheit" time-layout="k-p24h-n7-2">
+      <name>Daily Maximum Temperature</name>
+        <value>40</value>
+        <value>35</value>
+        <value>34</value>
+        <value>32</value>
+        <value>29</value>
+        <value>34</value>
+        <value>37</value>
+    </temperature>
+
+    <probability-of-precipitation  type="12 hour" units="percent" time-layout="k-p12h-n14-1">
+      <name>12 Hourly Probability of Precipitation</name>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value>30</value>
+        <value>20</value>
+        <value xsi:nil="true"></value>
+        <value>70</value>
+        <value>70</value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+        <value xsi:nil="true"></value>
+    </probability-of-precipitation>
+
+    <weather time-layout="k-p12h-n14-1">
+      <name>Weather Type, Coverage, Intensity</name>
+        <weather-conditions weather-summary="Chance Sprinkles/Flurries"/>
+        <weather-conditions weather-summary="Mostly Cloudy"/>
+        <weather-conditions weather-summary="Chance Snow"/>
+        <weather-conditions weather-summary="Slight Chc Snow"/>
+        <weather-conditions weather-summary="Mostly Cloudy"/>
+        <weather-conditions weather-summary="Rain/Snow Likely"/>
+        <weather-conditions weather-summary="Rain/Snow Likely"/>
+        <weather-conditions weather-summary="Chance Snow"/>
+        <weather-conditions weather-summary="Slight Chc Snow"/>
+        <weather-conditions weather-summary="Slight Chc Snow"/>
+        <weather-conditions weather-summary="Chance Snow"/>
+        <weather-conditions weather-summary="Cloudy"/>
+        <weather-conditions weather-summary="Mostly Cloudy"/>
+        <weather-conditions weather-summary="Mostly Cloudy"/>
+    </weather>
+
+    <conditions-icon type="forecast-NWS" time-layout="k-p12h-n14-1">
+      <name>Conditions Icon</name>        <icon-link>http://forecast.weather.gov/images/wtf/medium/novc.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/bkn.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/nsn30.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/sn20.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/nbkn.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/rasn70.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/nrasn70.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/sn.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/nsn.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/sn.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/nsn.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/ovc.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/nbkn.png</icon-link>
+        <icon-link>http://forecast.weather.gov/images/wtf/medium/bkn.png</icon-link>
+    </conditions-icon>
+
+    <hazards time-layout="k-p6h-n1-1">
+      <name>Watches, Warnings, and Advisories</name>
+      <hazard-conditions>
+        <hazard headline="Short Term Forecast">
+          <hazardTextURL>http://forecast.weather.gov/showsigwx.php?warnzone=MIZ032&amp;warncounty=MIC165&amp;firewxzone=MIZ032&amp;local_place1=2+Miles+N+Boon+MI&amp;product1=Short+Term+Forecast</hazardTextURL>
+        </hazard>
+      </hazard-conditions>
+    </hazards>
+
+    <wordedForecast time-layout="k-p12h-n14-1" dataSource="apxNetcdf" wordGenerator="markMitchell">
+      <name>Text Forecast</name>
+        <text>Scattered sprinkles and flurries between 7pm and 1am.  Cloudy, with a low around 32. South wind 5 to 10 mph becoming west after midnight. </text>
+        <text>Mostly cloudy, with a high near 40. North wind around 5 mph. </text>
+        <text>A 30 percent chance of snow after 1am.  Cloudy, with a low around 27. Northeast wind around 5 mph becoming calm. </text>
+        <text>A 20 percent chance of snow before 1pm.  Mostly cloudy, with a high near 35. Calm wind becoming northeast around 5 mph in the afternoon. </text>
+        <text>Mostly cloudy, with a low around 26. East wind around 5 mph becoming calm. </text>
+        <text>Rain and snow likely.  Cloudy, with a high near 34. Chance of precipitation is 70%.</text>
+        <text>Rain and snow likely.  Cloudy, with a low around 28. Chance of precipitation is 70%.</text>
+        <text>A chance of snow.  Mostly cloudy, with a high near 32.</text>
+        <text>A slight chance of snow showers.  Mostly cloudy, with a low around 21.</text>
+        <text>A slight chance of snow showers.  Mostly cloudy, with a high near 29.</text>
+        <text>A chance of snow.  Cloudy, with a low around 23.</text>
+        <text>Cloudy, with a high near 34.</text>
+        <text>Mostly cloudy, with a low around 26.</text>
+        <text>Mostly cloudy, with a high near 37.</text>
+    </wordedForecast>
+
+</parameters>
+</data>
+<data type="current observations">
+	<location>
+		<location-key>point1</location-key>
+		<point latitude="44.29" longitude="-85.42"/>
+		<area-description>Cadillac / Wexford County, MI</area-description>
+		<height datum="mean sea level" height-units="feet">1300</height>
+	</location>
+	<moreWeatherInformation applicable-location="point1">http://www.nws.noaa.gov/data/obhistory/KCAD.html</moreWeatherInformation>	<time-layout time-coordinate="local">	<layout-key>k-p1h-n1-1</layout-key>	<start-valid-time period-name="current">2012-12-06T17:36:00-05:00</start-valid-time>	</time-layout>	<parameters applicable-location="point1">	<temperature type="apparent" units="Fahrenheit" time-layout="k-p1h-n1-1">	<value>36</value>	</temperature>	<temperature type="dew point" units="Fahrenheit" time-layout="k-p1h-n1-1">	<value>26</value>	</temperature>	<humidity type="relative" time-layout="k-p1h-n1-1">	<value>68</value>	</humidity>	<weather time-layout="k-p1h-n1-1">	<name>Weather Type, Coverage, Intensity</name>	<weather-conditions weather-summary="Overcast"/>	<weather-conditions>	<value>	<visibility units="statute miles">10.00</visibility>	</value>	</weather-conditions>	</weather>	<conditions-icon type="forecast-NWS" time-layout="k-p1h-n1-1">	<name>Conditions Icon</name>	<icon-link>http://forecast.weather.gov/images/wtf/medium/novc.png</icon-link>	</conditions-icon>	<direction type="wind" units="degrees true" time-layout="k-p1h-n1-1">	<value>170</value>	</direction>	<wind-speed type="gust" units="knots" time-layout="k-p1h-n1-1">	<value>NA</value>	</wind-speed>	<wind-speed type="sustained" units="knots" time-layout="k-p1h-n1-1">	<value>7</value>	</wind-speed>		<pressure type="barometer" units="inches of mercury" time-layout="k-p1h-n1-1">			<value>29.86</value>		</pressure>	</parameters></data></dwml>

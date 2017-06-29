@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/resources/weather">
+        <file>weatherfeed.xml</file>
+        <file>resources/nxrd_pa_.gif</file>
+    </qresource>
+</RCC>

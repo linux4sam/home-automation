@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>background.png</file>
+        <file>QuickCastRadio.qml</file>
+        <file>NowPlaying.qml</file>
+        <file>media-playback-stop.png</file>
+        <file>toolbutton.sci</file>
+        <file>toolbutton.png</file>
+        <file>mediacontrol/MediaControl.qml</file>
+        <file>mediacontrol/StopButton.qml</file>
+        <file>mediacontrol/VolumeSlider.qml</file>
+        <file>stationlist/StationDelegate.qml</file>
+        <file>welcome_bg.png</file>
+        <file>mediacontrol/bar.png</file>
+        <file>mediacontrol/slider.png</file>
+        <file>smallNowPlaying.qml</file>
+        <file>smallQuickCastRadio.qml</file>
+        <file>smallmediacontrol/bar.png</file>
+        <file>smallmediacontrol/MediaControl.qml</file>
+        <file>smallmediacontrol/slider.png</file>
+        <file>smallmediacontrol/StopButton.qml</file>
+        <file>smallmediacontrol/VolumeSlider.qml</file>
+        <file>smallstationlist/StationDelegate.qml</file>
+        <file>smallbackground.png</file>
+        <file>smallmedia-playback-stop.png</file>
+        <file>smalltoolbutton.png</file>
+        <file>smalltoolbutton.sci</file>
+        <file>smallwelcome_bg.png</file>
+    </qresource>
+</RCC>

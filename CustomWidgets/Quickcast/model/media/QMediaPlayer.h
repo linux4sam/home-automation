@@ -1,0 +1,4 @@
+#ifndef QMEDIAPLAYER_H
+#define QMEDIAPLAYER_H
+
+#endif // QMEDIAPLAYER_H

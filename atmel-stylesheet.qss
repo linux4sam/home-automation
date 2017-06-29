@@ -1,0 +1,124 @@
+QWidget#widgetGraphicsBox{
+    background-color: #19262E;
+}
+
+QLabel#label_SETTINGS{
+    color: #F59719;
+    font-size: 16px;
+    font-type: "Sans Serif";
+}
+
+QLabel#labelROOM1{
+    color: rgb(255,255,255);
+}
+QLabel#labelROOM2{
+    color: rgb(255,255,255);
+}
+QLabel#labelROOM3{
+    color: rgb(255,255,255);
+}
+
+QWidget#PrefsSettings>QLabel{
+    color: rgb(255,255,255);
+}
+
+QWidget#ClimateSettings>QLabel{
+    color: rgb(255,255,255);
+}
+
+QWidget#LightingSettings>QLabel{
+    color: rgb(255,255,255);
+}
+
+QWidget#MediaSettings>QLabel{
+    color: rgb(255,255,255);
+}
+
+QWidget#SecuritySettings>QLabel{
+    color: rgb(255,255,255);
+}
+
+QWidget#ClimateSettings>QLineEdit{
+    background-color: rgb(0,0,0);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0 8px;
+    color: white;
+}
+
+QWidget#LightingSettings>QLineEdit{
+    background-color: rgb(0,0,0);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0 8px;
+    color: white;
+}
+
+QWidget#PrefsSettings>QLineEdit{
+    background-color: rgb(0,0,0);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0 8px;
+    color: white;
+}
+
+QWidget#MediaSettings>QLineEdit{
+    background-color: rgb(0,0,0);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0 8px;
+    color: white;
+}
+
+QWidget#SecuritySettings>QLineEdit{
+    background-color: rgb(0,0,0);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0 8px;
+    color: white;
+}
+
+QWidget#PrefsSettings>QComboBox{
+    background-color: rgb(0,0,0);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0 8px;
+    color: white;
+}
+
+QWidget#LightingSettings>QComboBox{
+    background-color: rgb(0,0,0);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0 8px;
+    color: white;
+}
+
+QWidget#PrefsSettings>QComboBox::drop-down{
+    width: 50;
+}
+
+QWidget#LightingSettings>QComboBox::drop-down{
+    width: 50;
+}
+
+QMainWindow{
+    background: #19262E;
+    background-color: #19262E;
+    alternate-background-color: #19262E;
+}
+
+QStackedWidget {
+    padding: 0px;
+    margin: 0px;
+}
+
+QPushButton {
+    background-color: transparent;
+    alternate-background-color: transparent;
+}
+
+QToolButton {
+    background-color: transparent;
+    alternate-background-color: transparent;
+}

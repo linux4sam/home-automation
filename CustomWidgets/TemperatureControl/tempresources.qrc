@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/temp-dial-stylesheet.qss</file>
+        <file>resources/temp-dial-blue.png</file>
+        <file>resources/temp-dial-red.png</file>
+        <file>resources/temp-dial-teal.png</file>
+        <file>resources/knob-big.png</file>
+        <file>resources/knob-small.png</file>
+        <file>resources/temp-dial-blue-small.png</file>
+        <file>resources/temp-dial-red-small.png</file>
+        <file>resources/temp-dial-teal-small.png</file>
+        <file>resources/temp-dial-stylesheet-small.qss</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/home-screen/block-climate.png</file>
+        <file>resources/home-screen/block-homeautomation.png</file>
+        <file>resources/home-screen/block-lighting.png</file>
+        <file>resources/home-screen/block-logo.png</file>
+        <file>resources/home-screen/block-media.png</file>
+        <file>resources/home-screen/block-security.png</file>
+        <file>resources/home-screen/block-settings.png</file>
+        <file>resources/home-screen/block-help.png</file>
+        <file>resources/other/loader1.gif</file>
+        <file>resources/other/loader2.gif</file>
+        <file>resources/other/loader.gif</file>
+        <file>resources/other/loader4.gif</file>
+        <file>resources/other/loader5.gif</file>
+        <file>resources/other/loader6.gif</file>
+        <file>resources/other/loader7.gif</file>
+        <file>resources/smallhome-screen/block-climate.png</file>
+        <file>resources/smallhome-screen/block-help.png</file>
+        <file>resources/smallhome-screen/block-homeautomation.png</file>
+        <file>resources/smallhome-screen/block-lighting.png</file>
+        <file>resources/smallhome-screen/block-logo.png</file>
+        <file>resources/smallhome-screen/block-media.png</file>
+        <file>resources/smallhome-screen/block-security.png</file>
+        <file>resources/smallhome-screen/block-settings.png</file>
+    </qresource>
+</RCC>

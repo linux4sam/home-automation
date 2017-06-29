@@ -1,0 +1,36 @@
+QWidget#DayWeather{
+    border-image: url(":/../5day-bkgr-small.png");
+}
+
+
+QLabel {
+    font: 10pt "Sans Serif";
+    color: rgb(199, 199, 199);
+}
+
+QLabel#temperature{
+        font: 18px;
+	color: white;	
+}
+
+QLabel#day{
+        font: 15px;
+        color: #0f93dd;
+}
+
+QLabel#weather_description_label{
+  font: bold;
+  color: rgb(255, 255, 255);
+}
+
+QLabel#date_label{
+  font: bold 11pt;
+  color: #0F93dd
+}
+
+QLabel#temp_label{
+  font: 40pt;
+  color: rgb(255, 255, 255);
+}
+
+

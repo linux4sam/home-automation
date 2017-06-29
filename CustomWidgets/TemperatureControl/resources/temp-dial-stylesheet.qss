@@ -1,0 +1,25 @@
+QLabel {
+    font-family: "Sans Serif";
+}
+
+QLabel#label_Temp_Top{
+        font: bold 50px;
+        color: white;
+}
+
+QLabel#label_Temp_Bottom{
+        font: 35px;
+        color: #1E2B33;
+}
+
+QLabel#label_Top{
+        font: 17px;
+        color: #1E2B33;
+}
+
+QLabel#label_Bottom{
+        font: 17px;
+        color: #1E2B33;
+}
+
+
