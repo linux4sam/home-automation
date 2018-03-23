@@ -84,7 +84,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -97,7 +97,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -114,7 +114,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -127,7 +127,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -144,7 +144,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -157,7 +157,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -174,7 +174,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -187,7 +187,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
           </widget>
@@ -239,7 +239,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -252,7 +252,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
           </widget>
@@ -266,7 +266,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -279,7 +279,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
           </widget>
@@ -293,7 +293,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -306,7 +306,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
           </widget>
@@ -320,7 +320,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
            <property name="text">
@@ -333,7 +333,7 @@
            <property name="font">
             <font>
              <family>Sans Serif</family>
-             <pointsize>20</pointsize>
+             <pointsize>16</pointsize>
             </font>
            </property>
           </widget>

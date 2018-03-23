@@ -99,7 +99,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="focusPolicy">
@@ -139,7 +139,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="focusPolicy">
@@ -179,7 +179,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="focusPolicy">
@@ -219,7 +219,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="focusPolicy">
@@ -259,7 +259,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="focusPolicy">

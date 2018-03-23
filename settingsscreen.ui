@@ -99,7 +99,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>12</pointsize>
               <weight>50</weight>
               <bold>false</bold>
              </font>
@@ -135,7 +135,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>12</pointsize>
               <weight>50</weight>
               <bold>false</bold>
              </font>
@@ -171,7 +171,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>12</pointsize>
               <weight>50</weight>
               <bold>false</bold>
              </font>
@@ -207,7 +207,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>12</pointsize>
               <weight>50</weight>
               <bold>false</bold>
              </font>
@@ -243,7 +243,7 @@
             <property name="font">
              <font>
               <family>Sans Serif</family>
-              <pointsize>16</pointsize>
+              <pointsize>12</pointsize>
               <weight>50</weight>
               <bold>false</bold>
              </font>
