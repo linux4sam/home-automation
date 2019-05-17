@@ -148,6 +148,7 @@
 #include "dayweather.h"
 #include "ui_dayweather.h"
 #include "dayweatherdetail.h"
+#include <QIcon>
 #include <QtNetwork/QNetworkAccessManager>
 #include <QUrl>
 #include <QtNetwork/QNetworkReply>

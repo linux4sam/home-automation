@@ -145,6 +145,7 @@
 **
 ****************************************************************************/
 
+#include <QIcon>
 #include "dayweatherdetail.h"
 #include "ui_dayweatherdetail.h"
 #include "dayweather.h"

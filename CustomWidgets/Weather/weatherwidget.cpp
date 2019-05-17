@@ -160,6 +160,7 @@
 #include "weatherxmlcontenthandler.h"
 #include <iostream>
 #include <QByteArray>
+#include <QIcon>
 #include "imagewidget.h"
 
 extern bool isSmallResolution;
