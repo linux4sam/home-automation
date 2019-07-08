@@ -147,6 +147,8 @@
 #define HOMESCREEN_H
 
 #include <QWidget>
+#include <QtMultimedia>
+#include <QtMultimediaWidgets>
 #include "qmainwindow.h"
 
 namespace Ui {
