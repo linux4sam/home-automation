@@ -175,7 +175,7 @@ WeatherWidget::WeatherWidget(QWidget *parent) :
     ui(new Ui::WeatherWidget)
 {
     ui->setupUi(this);
-    zipCode = PrefsSettings::getZipCode();
+    zipCode = 1001;
     handler = new WeatherXmlContentHandler();
     networkAccessManager = new QNetworkAccessManager(this);
 
