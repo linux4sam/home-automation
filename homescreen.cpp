@@ -172,20 +172,11 @@ HomeScreen::HomeScreen(QWidget *parent) :
         ui->label->setMinimumSize(ui->label->minimumWidth() * wSFactor, ui->label->minimumHeight() * hSFactor);
         ui->label->setStyleSheet(QString::fromUtf8("border-image: url(:/resources/smallhome-screen/block-logo.png);"));
 
-        ui->pushHelpButton->setMinimumSize(ui->pushHelpButton->minimumWidth() * wSFactor, ui->pushHelpButton->minimumHeight() * hSFactor);
-        ui->pushHelpButton->setPixmap(QPixmap(QString::fromUtf8(":/resources/smallhome-screen/block-help.png")));
-
-        ui->pushSettingsButton->setMinimumSize(ui->pushSettingsButton->minimumWidth() * wSFactor, ui->pushSettingsButton->minimumHeight() * hSFactor);
-        ui->pushSettingsButton->setPixmap(QPixmap(QString::fromUtf8(":/resources/smallhome-screen/block-settings.png")));
-
         ui->pushClimateButton->setMinimumSize(ui->pushClimateButton->minimumWidth() * wSFactor, ui->pushClimateButton->minimumHeight() * hSFactor);
         ui->pushClimateButton->setPixmap(QPixmap(QString::fromUtf8(":/resources/smallhome-screen/block-climate.png")));
 
         ui->pushLightingButton->setMinimumSize(ui->pushLightingButton->minimumWidth() * wSFactor, ui->pushLightingButton->minimumHeight() * hSFactor);
         ui->pushLightingButton->setPixmap(QPixmap(QString::fromUtf8(":/resources/smallhome-screen/block-lighting.png")));
-
-        ui->pushMediaButton->setMinimumSize(ui->pushMediaButton->minimumWidth() * wSFactor, ui->pushMediaButton->minimumHeight() * hSFactor);
-        ui->pushMediaButton->setPixmap(QPixmap(QString::fromUtf8(":/resources/smallhome-screen/block-media.png")));
 
         ui->pushSecurityButton->setMinimumSize(ui->pushSecurityButton->minimumWidth() * wSFactor, ui->pushSecurityButton->minimumHeight() * hSFactor);
         ui->pushSecurityButton->setPixmap(QPixmap(QString::fromUtf8(":/resources/smallhome-screen/block-security.png")));
@@ -203,8 +194,6 @@ HomeScreen::HomeScreen(QWidget *parent) :
 
         mainWin->mcontrols->setVisible(false);
 
-        connect(this,SIGNAL(helpRequested()),mainWin->mcontrols, SLOT(buttonHelp_set()));
-        connect(this,SIGNAL(settingsRequested()),mainWin->mcontrols, SLOT(buttonSettings_set()));
         connect(this,SIGNAL(resetControls()),mainWin->mcontrols, SLOT(buttonSet_none()));
     }
 
@@ -213,11 +202,8 @@ HomeScreen::HomeScreen(QWidget *parent) :
 
     connect(ui->pushClimateButton, SIGNAL(clicked()), this, SLOT(on_pushClimateButton_clicked()));
     connect(ui->pushLightingButton, SIGNAL(clicked()), this, SLOT(on_pushLightingButton_clicked()));
-    connect(ui->pushMediaButton, SIGNAL(clicked()), this, SLOT(on_pushMediaButton_clicked()));
     connect(ui->pushSecurityButton, SIGNAL(clicked()), this, SLOT(on_pushSecurityButton_clicked()));
 
-    connect(ui->pushHelpButton, SIGNAL(clicked()), this, SLOT(on_pushHelpButton_clicked()));
-    connect(ui->pushSettingsButton, SIGNAL(clicked()), this, SLOT(on_pushSettingsButton_clicked()));
 }
 
 /***
@@ -226,24 +212,6 @@ HomeScreen::HomeScreen(QWidget *parent) :
 HomeScreen::~HomeScreen()
 {
     delete ui;
-}
-
-/***
- ** Function handler for the Help Button
- ** Emits a signal to other objects
- **/
-void HomeScreen::on_pushHelpButton_clicked()
-{
-    emit(helpRequested());
-}
-
-/***
- ** Function handler for the Settings Button
- ** Emits a signal to other objects
- **/
-void HomeScreen::on_pushSettingsButton_clicked()
-{
-    emit(settingsRequested());
 }
 
 /***
@@ -276,17 +244,6 @@ void HomeScreen::on_pushLightingButton_clicked()
 void HomeScreen::on_pushSecurityButton_clicked()
 {
     emit(securityRequested());
-    emit(resetControls());
-}
-
-/***
- ** Function handler for the Media Button
- ** Emits a signal to other objects
- ** Reset Controls - shows Main and side control panels
- **/
-void HomeScreen::on_pushMediaButton_clicked()
-{
-    emit(mediaRequested());
     emit(resetControls());
 }
 

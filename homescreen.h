@@ -170,26 +170,17 @@ public:
     void stopProgress();
 
 signals:
-    void helpRequested();
-    void settingsRequested();
     void climateRequested();
     void lightingRequested();
     void securityRequested();
-    void mediaRequested();
     void resetControls();
     
 private slots:
-    void on_pushHelpButton_clicked();
-
-    void on_pushSettingsButton_clicked();
-
     void on_pushClimateButton_clicked();
 
     void on_pushLightingButton_clicked();
 
     void on_pushSecurityButton_clicked();
-
-    void on_pushMediaButton_clicked();
 
 private:
     Ui::HomeScreen *ui;

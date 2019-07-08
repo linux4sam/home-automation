@@ -265,22 +265,16 @@ SettingsScreen::SettingsScreen(QWidget *parent) :
     prefsSettings = new PrefsSettings();
     lightingSettings = new LightingSettings();
     securitySettings = new SecuritySettings();
-    mediaSettings = new MediaSettings();
 
     ui->graphicsWidgetLayout->addWidget(climateSettings);
     ui->graphicsWidgetLayout->addWidget(prefsSettings);
     ui->graphicsWidgetLayout->addWidget(lightingSettings);
     ui->graphicsWidgetLayout->addWidget(securitySettings);
-    ui->graphicsWidgetLayout->addWidget(mediaSettings);
 
     prefsSettings->setVisible(false);
     lightingSettings->setVisible(false);
     securitySettings->setVisible(false);
-    mediaSettings->setVisible(false);
 
-    keyboard = NULL;
-
-    QObject::connect(qApp, SIGNAL(focusChanged(QWidget*, QWidget*)), this, SLOT(focusChanged(QWidget*, QWidget*)));
     QObject::connect(climateSettings, SIGNAL(sendingZonesInfo(QStringList&)), this, SLOT(sendingHVACZonesSlot(QStringList&)));
 
     ui->buttonSettingsClimate->setChecked(true);
@@ -319,7 +313,6 @@ void SettingsScreen::on_buttonSettingsPrefs_clicked()
     climateSettings->setVisible(false);
     prefsSettings->setVisible(true);
     securitySettings->setVisible(false);
-    mediaSettings->setVisible(false);
 }
 
 void SettingsScreen::on_buttonSettingsMedia_clicked()
@@ -330,7 +323,6 @@ void SettingsScreen::on_buttonSettingsMedia_clicked()
     lightingSettings->setVisible(false);
     climateSettings->setVisible(false);
     securitySettings->setVisible(false);
-    mediaSettings->setVisible(true);
 }
 
 void SettingsScreen::on_buttonSettingsLighting_clicked()
@@ -342,7 +334,6 @@ void SettingsScreen::on_buttonSettingsLighting_clicked()
     climateSettings->setVisible(false);
     lightingSettings->setVisible(true);
     securitySettings->setVisible(false);
-    mediaSettings->setVisible(false);
 }
 
 void SettingsScreen::on_buttonSettingsClimate_clicked()
@@ -353,7 +344,6 @@ void SettingsScreen::on_buttonSettingsClimate_clicked()
     lightingSettings->setVisible(false);
     climateSettings->setVisible(true);
     securitySettings->setVisible(false);
-    mediaSettings->setVisible(false);
 }
 
 void SettingsScreen::on_buttonSettingsSecurity_clicked()
@@ -364,38 +354,6 @@ void SettingsScreen::on_buttonSettingsSecurity_clicked()
     lightingSettings->setVisible(false);
     climateSettings->setVisible(false);
     securitySettings->setVisible(true);
-    mediaSettings->setVisible(false);
-}
-
-/***
- ** Overriding focusChanged handler
- ** Filter active widget and if its of a type QLineEdit, show onscreen Keyboard
- **/
-void SettingsScreen::focusChanged(QWidget* /*old*/, QWidget* nob)
-{
-    if(nob){
-        if (nob->inherits("QLineEdit")){
-            if(keyboard)
-            {
-                    keyboard->onEnterButtonPressed(keyboard->currentString);
-            }
-            QLineEdit* lEdit = (QLineEdit*)nob;
-            keyboard = new KeyboardWidget();
-            keyboard->setReceivingField(lEdit);
-
-            keyboard->setCurrentString(lEdit->text());
-            lEdit->setText(QString(""));
-
-            QObject::connect(keyboard, SIGNAL(killKeyboard()), this, SLOT(destroyKeyboard()));
-            keyboard->show();
-        }
-    }
-}
-
-void SettingsScreen::destroyKeyboard()
-{
-    keyboard->deleteLater();
-    keyboard = NULL;
 }
 
 /***

@@ -152,7 +152,6 @@
 #include "ui_hvacscreen.h"
 #include "HVAC/weatherforcast.h"
 #include "HVAC/weatherdetail.h"
-#include "HVAC/radarinfo.h"
 #include "weatherwidget.h"
 #include "HVAC/hvacset.h"
 
@@ -188,15 +187,11 @@ HVACScreen::HVACScreen(QWidget *parent) :
     DayWeatherDetail* dayWeatherDetail = weatherDetailWidget->getWeatherDetailWidget();
     dayWeatherDetail->setHandler(weatherWidget->getHandler());
 
-    RadarInfo* radarInfo = new RadarInfo();
-    ui->layoutRadarView->addWidget(radarInfo);
     WeatherXmlContentHandler* handler = weatherWidget->getHandler();
-    radarInfo->setHandler(handler);
     hvacControl->setHandler(handler);
 
     connect(weatherWidget, SIGNAL(weatherXmlHandlerIsReady()), dayWeatherDetail, SLOT( setWeatherDetailValues() ));
     connect(weatherWidget, SIGNAL(weatherXmlHandlerIsReady()), hvacControl, SLOT( setWeatherValues()));
-    connect(weatherWidget, SIGNAL(weatherXmlHandlerIsReady()), radarInfo, SLOT( setRadarGif() ));
 
     weatherWidget->getWeatherInformation();
 
@@ -204,8 +199,6 @@ HVACScreen::HVACScreen(QWidget *parent) :
     connect(weatherForecastWidget, SIGNAL(requestHVAC()), this, SLOT(switchToHVAC()));
     connect(weatherForecastWidget, SIGNAL(requestWeatherDetails()), this, SLOT(switchToWeatherDetail()));
     connect(weatherDetailWidget, SIGNAL(requestWeatherForecast()), this, SLOT(switchToWeatherForcast()));
-    connect(weatherDetailWidget, SIGNAL(requestRadar()), this, SLOT(switchToRadar()));
-    connect(radarInfo, SIGNAL(requestWeatherDetails()), this, SLOT(switchToWeatherDetail()));
 
     connect(hvacControl, SIGNAL(requestLabels()), this, SLOT(requestLabelsforHVACSlot()));
 }
@@ -241,14 +234,6 @@ void HVACScreen::switchToHVAC()
 void HVACScreen::switchToWeatherDetail()
 {
     ui->stackedHVACWidget->setCurrentIndex(2);
-}
-
-/***
- ** Switch the view in the HVAC Screen to Doppler Radar screen
- **/
-void HVACScreen::switchToRadar()
-{
-    ui->stackedHVACWidget->setCurrentIndex(3);
 }
 
 /***

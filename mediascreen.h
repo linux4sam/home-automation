@@ -149,8 +149,6 @@
 #include <QWidget>
 #include <QTimer>
 
-#include "quickcastwidget.h"
-
 namespace Ui {
 class MediaScreen;
 }

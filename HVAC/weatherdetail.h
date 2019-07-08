@@ -172,8 +172,6 @@ signals:
 private slots:
     void on_pushButtonLeft_clicked();
 
-    void on_pushButtonRight_clicked();
-
 private:
     Ui::WeatherDetail *ui;
 };

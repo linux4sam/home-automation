@@ -163,9 +163,7 @@ WeatherDetail::WeatherDetail(QWidget *parent) :
     if (isSmallResolution) {
         ui->horizontalLayout->setContentsMargins( 0, 20, 0, 20);
         ui->pushButtonLeft->setIcon( QIcon(":/resources/small-images/arrow-left.png"));
-        ui->pushButtonRight->setIcon( QIcon(":/resources/small-images/arrow-right.png"));
         ui->pushButtonLeft->setIconSize( QSize(25, 25));
-        ui->pushButtonRight->setIconSize( QSize(25, 25));
     }
 }
 
@@ -183,14 +181,6 @@ WeatherDetail::~WeatherDetail()
 void WeatherDetail::on_pushButtonLeft_clicked()
 {
     emit(requestWeatherForecast());
-}
-
-/***
- ** Handler for the Right button - switch current screen to next
- **/
-void WeatherDetail::on_pushButtonRight_clicked()
-{
-    emit(requestRadar());
 }
 
 /***

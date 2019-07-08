@@ -171,7 +171,6 @@ public slots:
     void switchToWeatherForcast();
     void switchToHVAC();
     void switchToWeatherDetail();
-    void switchToRadar();
 
     void setHVACZonesInfo(QStringList&);
     void requestLabelsforHVACSlot(){ emit(requestLabelsforHVAC());}

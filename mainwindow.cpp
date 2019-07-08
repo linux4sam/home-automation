@@ -149,14 +149,11 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "helpscreen.h"
 #include "maincontrols.h"
-#include "settingsscreen.h"
 #include "hvacscreen.h"
 #include "homescreen.h"
 #include "securityscreen.h"
 #include "lightingscreen.h"
-#include "mediascreen.h"
 
 #include "MicroCounter.h"
 #include <QCoreApplication>
@@ -198,8 +195,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->stackedWidget->setVerticalMode(false);
     ui->stackedWidget->setCurrentIndex(0);       //set the initial page to Help page
 
-    helpScreen = NULL;
-    mediaScreen = NULL;
     lightScreen = NULL;
     securityScreen = NULL;
 
@@ -208,26 +203,17 @@ MainWindow::MainWindow(QWidget *parent) :
         mcontrols = new MainControls();
         ui->controlButtonsLayout->addWidget(mcontrols);
 
-        QObject::connect(mcontrols, SIGNAL(settingsRequested()), this, SLOT(switchToSettingsScreen()));
-        QObject::connect(mcontrols, SIGNAL(helpRequested()), this, SLOT(switchToHelpScreen()));
         QObject::connect(mcontrols, SIGNAL(homeRequested()), this, SLOT(switchToHomeScreen()));
     }
 
     homeScreen = new HomeScreen(this);
     ui->pageHomeLayout->addWidget(homeScreen);
 
-    QObject::connect(ui->stackedWidget, SIGNAL(animationFinished()), this, SLOT(windowSwitchingDone()));
-    QObject::connect(homeScreen, SIGNAL(settingsRequested()), this, SLOT(switchToSettingsScreen()));
-    QObject::connect(homeScreen, SIGNAL(helpRequested()), this, SLOT(switchToHelpScreen()));
     QObject::connect(homeScreen, SIGNAL(climateRequested()), this, SLOT(switchToClimateScreen()));
     QObject::connect(homeScreen, SIGNAL(lightingRequested()), this, SLOT(switchToLightingScreen()));
     QObject::connect(homeScreen, SIGNAL(securityRequested()), this, SLOT(switchToSecurityScreen()));
-    QObject::connect(homeScreen, SIGNAL(mediaRequested()), this, SLOT(switchToMediaScreen()));
 
     this->showFullScreen();
-
-    helpScreen = new HelpScreen();
-    ui->pageHelpLayout->addWidget(helpScreen);
 
     this->setEnabled(false);
     homeScreen->startProgress();
@@ -245,41 +231,6 @@ MainWindow::~MainWindow()
 }
 
 /***
- ** Handler method for the Settings button
- ** Switch visible screen to Settings using custom stackedWidget transition
- ** Set Security and Help screens to a default state (avoid CPU consumption in background)
- **/
-void MainWindow::switchToSettingsScreen()
-{
-    ui->stackedWidget->slideInIdx(5);
-    ui->stackedWidget->setFocus();
-    if(securityScreen)
-        securityScreen->turnOffCameras();
-    if(helpScreen)
-        helpScreen->stopVideoPlayback();
-    // benchmark();
-}
-
-/***
- ** Handler method for the Help button
- ** Switch visible screen to Help using custom stackedWidget transition
- ** Set Security and Help screens to a default state (avoid CPU consumption in background)
- **/
-void MainWindow::switchToHelpScreen()
-{
-	if(helpScreen == NULL){
-        helpScreen = new HelpScreen();
-        ui->pageHelpLayout->addWidget(helpScreen);
-	}
-
-    ui->stackedWidget->slideInIdx(1);
-    if(securityScreen)
-        securityScreen->turnOffCameras();
-    if(helpScreen)
-        helpScreen->stopVideoPlayback();
-}
-
-/***
  ** Handler method for the Climate button
  ** Switch visible screen to Climate using custom stackedWidget transition
  ** Set Security and Help screens to a default state (avoid CPU consumption in background)
@@ -289,8 +240,6 @@ void MainWindow::switchToClimateScreen()
     ui->stackedWidget->slideInIdx(2);
     if(securityScreen)
         securityScreen->turnOffCameras();
-    if(helpScreen)
-        helpScreen->stopVideoPlayback();
     // benchmark();
 }
 
@@ -307,17 +256,10 @@ void MainWindow::switchToLightingScreen()
 		lightScreen = new LightingScreen();
 		ui->pageLightingLayout->addWidget(lightScreen);
 
-		LightingSettings* lightingSettings = settingsScreen->getLightingSettings();
-		QObject::connect(lightingSettings, SIGNAL(roomNamesChanged(QList<QStringList>&)), lightScreen, SLOT(setLighingRoomNames(QList<QStringList>&)));
-
 	}
     ui->stackedWidget->slideInIdx(4);
-    settingsScreen->populateLightingZones();
-    settingsScreen->getLightingSettings()->updateData();
     if(securityScreen)
         securityScreen->turnOffCameras();
-    if(helpScreen)
-        helpScreen->stopVideoPlayback();
     // benchmark();
 }
 
@@ -333,37 +275,8 @@ void MainWindow::switchToSecurityScreen()
         securityScreen = new SecurityScreen();
         ui->pageSecurityLayout->addWidget(securityScreen);
 
-        SecuritySettings* securitySettings  = settingsScreen->getSecuritySettings();
-        QObject::connect(securitySettings, SIGNAL(securityZonesChanged(QStringList&)), securityScreen, SLOT(setSecurityZoneNames(QStringList&)));
-
     }
     ui->stackedWidget->slideInIdx(3);
-    if(helpScreen)
-        helpScreen->stopVideoPlayback();
-    // benchmark();
-}
-
-/***
- ** Handler method for the Media button
- ** Switch visible screen to Media using custom stackedWidget transition
- ** Set Security and Help screens to a default state (avoid CPU consumption in background)
- **/
-void MainWindow::switchToMediaScreen()
-{
-	if(mediaScreen == NULL)
-	{
-        mediaScreen = new MediaScreen();
-		ui->pageMediaLayout->addWidget(mediaScreen);
-
-		MediaSettings* mediaSettings = settingsScreen->getMediaSettings();
-		QObject::connect(mediaSettings, SIGNAL(mediaRoomsChanged(QStringList&)), mediaScreen, SLOT(setMediaRoomNames(QStringList&)));
-	}
-
-    ui->stackedWidget->slideInIdx(6);
-    if(securityScreen)
-        securityScreen->turnOffCameras();
-    if(helpScreen)
-        helpScreen->stopVideoPlayback();
     // benchmark();
 }
 
@@ -374,16 +287,12 @@ void MainWindow::switchToMediaScreen()
  **/
 void MainWindow::switchToHomeScreen()
 {
-    overlayControls->setVisible(false);
-
     if (!isSmallResolution)
         mcontrols->setVisible(false);
 
     ui->stackedWidget->slideInIdx(0, 0);
     if(securityScreen)
         securityScreen->turnOffCameras();
-    if(helpScreen)
-        helpScreen->stopVideoPlayback();
     // benchmark();
 }
 
@@ -394,18 +303,6 @@ void MainWindow::switchToHomeScreen()
  **/
 void MainWindow::delayedInitProcess()
 {
-
-    overlayControls = new OverlayControls();
-    ui->navigationButtonLayout->addWidget(overlayControls);
-
-    overlayControls->setVisible(false);
-
-//    helpScreen = new HelpScreen();
-//    ui->pageHelpLayout->addWidget(helpScreen);
-
-    settingsScreen = new SettingsScreen();
-    ui->pageSettingsLayout->addWidget(settingsScreen);
-
     hvacScreen = new HVACScreen();
     ui->pageHVACLayout->addWidget(hvacScreen);
 
@@ -415,62 +312,11 @@ void MainWindow::delayedInitProcess()
     lightScreen = new LightingScreen();
     ui->pageLightingLayout->addWidget(lightScreen);
 
-    mediaScreen = new MediaScreen();
-    ui->pageMediaLayout->addWidget(mediaScreen);
-
-    QObject::connect(overlayControls, SIGNAL(climateRequest()), this, SLOT(switchToClimateScreen()));
-    QObject::connect(overlayControls, SIGNAL(mediaRequest()), this, SLOT(switchToMediaScreen()));
-    QObject::connect(overlayControls, SIGNAL(lightingRequest()), this, SLOT(switchToLightingScreen()));
-    QObject::connect(overlayControls, SIGNAL(securityRequest()), this, SLOT(switchToSecurityScreen()));
-
-    if (isSmallResolution) {
-        QObject::connect(overlayControls, SIGNAL(homeRequest()), this, SLOT(switchToHomeScreen()));
-    }
-
-    QObject::connect(hvacScreen, SIGNAL(requestLabelsforHVAC()), settingsScreen, SLOT(requestedHVACLabels()));
-    QObject::connect(settingsScreen, SIGNAL(sendingHVACZonesInfo(QStringList&)), hvacScreen, SLOT(setHVACZonesInfo(QStringList&)));
-
-
-    PrefsSettings* prefsSettings = settingsScreen->getPrefsSettings();
-	LightingSettings* lightingSettings = settingsScreen->getLightingSettings();
-	SecuritySettings* securitySettings  = settingsScreen->getSecuritySettings();
-	MediaSettings* mediaSettings = settingsScreen->getMediaSettings();
-
 	WeatherWidget* weatherWidget = hvacScreen->getWeatherForcast()->getWeatherWidget();
-
-	QObject::connect(prefsSettings, SIGNAL(zipCodeChanged(int)), weatherWidget, SLOT( updateWeather(int) ));
-	QObject::connect(lightingSettings, SIGNAL(roomNamesChanged(QList<QStringList>&)), lightScreen, SLOT(setLighingRoomNames(QList<QStringList>&)));
-	QObject::connect(mediaSettings, SIGNAL(mediaRoomsChanged(QStringList&)), mediaScreen, SLOT(setMediaRoomNames(QStringList&)));
-	QObject::connect(securitySettings, SIGNAL(securityZonesChanged(QStringList&)), securityScreen, SLOT(setSecurityZoneNames(QStringList&)));
-	QObject::connect(prefsSettings, SIGNAL(temperatureChanged(int)), hvacScreen->getHVACSet(), SLOT(setTempUnits(int)));
-
-    settingsScreen->requestedHVACLabels();  //populate the lables for HVAC
 
     this->setEnabled(true);
     homeScreen->stopProgress();
     // benchmark();
-}
-
-/***
- ** When stackedWidget transition animation is done display 2 control panels
- ** - overlay controls (left hand side)
- ** - main controls (right hand side)
- **/
-void MainWindow::windowSwitchingDone()
-{
-    if(ui->stackedWidget->currentIndex() == 0)
-    {
-        overlayControls->setVisible(false);
-
-        if (!isSmallResolution)
-            mcontrols->setVisible(false);
-    }else{
-        overlayControls->setVisible(true);
-
-        if (!isSmallResolution)
-            mcontrols->setVisible(true);
-    }
-
 }
 
 /***

@@ -148,13 +148,9 @@
 
 #include <QMainWindow>
 #include "maincontrols.h"
-#include "overlaycontrols.h"
 #include "securityscreen.h"
-#include "settingsscreen.h"
 #include "hvacscreen.h"
 #include "homescreen.h"
-#include "helpscreen.h"
-#include "mediascreen.h"
 #include "lightingscreen.h"
 
 namespace Ui {
@@ -173,25 +169,17 @@ public:
     ~MainWindow();
 
     MainControls* mcontrols;
-    OverlayControls* overlayControls;
     SecurityScreen* securityScreen;
-    SettingsScreen* settingsScreen;
     HVACScreen* hvacScreen;
     HomeScreen* homeScreen;
-    HelpScreen* helpScreen;
-    MediaScreen* mediaScreen;
     LightingScreen* lightScreen;
     
 private slots:
-    void switchToHelpScreen();
-    void switchToSettingsScreen();
     void switchToClimateScreen();
     void switchToLightingScreen();
     void switchToSecurityScreen();
-    void switchToMediaScreen();
     void switchToHomeScreen();
     void delayedInitProcess();
-    void windowSwitchingDone();
 
 private:
     Ui::MainWindow *ui;
